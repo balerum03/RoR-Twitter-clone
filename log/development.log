@@ -404,3 +404,1767 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.3ms | Allocations: 4989)
 
 
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 14:56:45 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 4002)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 514ms (Views: 504.5ms | ActiveRecord: 2.1ms | Allocations: 126889)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 15:10:54 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3772)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.2ms | Allocations: 8033)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <% if flash[:notice] %>
+     <div class="notification is-primary global-notification">
+       <p class="notice"><%= notice %> </p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="notification is-danger global-notification">
+       <p class="alert"><%= alert %></p>
+      </div>
+     <% end %>
+    <nav class="navbar is-info">
+      <div class = "navbar-brand">
+      <%= link_to root_path, class="navbar-item" do %>
+        <h5 class="title is-5">Twitter</h5>
+      <% end %>
+        <div class = "navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweet', new_tweet_path, class: "button is-info is-inverted"%>
+            </p>
+          </div>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>:
+
+Started POST "/__better_errors/414119c87a4aa488/variables" for 127.0.0.1 at 2020-10-08 15:10:54 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:12:20 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 772)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2521)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <% if flash[:notice] %>
+     <div class="notification is-primary global-notification">
+       <p class="notice"><%= notice %> </p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="notification is-danger global-notification">
+       <p class="alert"><%= alert %></p>
+      </div>
+     <% end %>
+    <nav class="navbar is-info">
+      <div class = "navbar-brand">
+      <%= link_to root_path, class="navbar-item" do %>
+        <h5 class="title is-5">Twitter</h5>
+      <% end %>
+        <div class = "navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweet', new_tweet_path, class: "button is-info is-inverted"%>
+            </p>
+          </div>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>:
+
+Started POST "/__better_errors/98538cf1390c804a/variables" for 127.0.0.1 at 2020-10-08 15:12:21 -0500
+Started POST "/__better_errors/98538cf1390c804a/variables" for 127.0.0.1 at 2020-10-08 15:12:38 -0500
+Started POST "/__better_errors/98538cf1390c804a/variables" for 127.0.0.1 at 2020-10-08 15:12:39 -0500
+Started POST "/__better_errors/98538cf1390c804a/variables" for 127.0.0.1 at 2020-10-08 15:12:45 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:15:15 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3772)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.1ms | Allocations: 7697)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <% if flash[:notice] %>
+     <div class="notification is-primary global-notification">
+       <p class="notice"><%= notice %> </p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="notification is-danger global-notification">
+       <p class="alert"><%= alert %></p>
+      </div>
+     <% end %>
+    <nav class="navbar is-info">
+      <div class = "navbar-brand">
+      <%= link_to root_path, class="navbar-item" do %>
+        <h5 class="title is-5">Twitter</h5>
+      <% end %>
+        <div class = "navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweet', new_tweet_path, class: "button is-info is-inverted"%>
+            </p>
+          </div>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>:
+
+Started POST "/__better_errors/37f4866efa03ef96/variables" for 127.0.0.1 at 2020-10-08 15:15:15 -0500
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:20:28 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4096)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.3ms | Allocations: 8602)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <% if flash[:notice] %>
+     <div class="notification is-primary global-notification">
+       <p class="notice"><%= notice %> </p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="notification is-danger global-notification">
+       <p class="alert"><%= alert %></p>
+      </div>
+     <% end %>
+    <nav class="navbar is-info">
+      <div class = "navbar-brand">
+      <%= link_to root_path, class="navbar-item" do %>
+        <h5 class="title is-5">Twitter</h5>
+      <% end %>
+        <div class = "navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweet', new_tweets_path, class: "button is-info is-inverted"%>
+            </p>
+          </div>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>:
+
+Started POST "/__better_errors/d1117eaee8344ae6/variables" for 127.0.0.1 at 2020-10-08 15:20:28 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:21:20 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1009)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 3599)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <% if flash[:notice] %>
+     <div class="notification is-primary global-notification">
+       <p class="notice"><%= notice %> </p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="notification is-danger global-notification">
+       <p class="alert"><%= alert %></p>
+      </div>
+     <% end %>
+    <nav class="navbar is-info">
+      <div class = "navbar-brand">
+      <%= link_to root_path, class="navbar-item" do %>
+        <h5 class="title is-5">Twitter</h5>
+      <% end %>
+        <div class = "navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweet', new_tweet, class: "button is-info is-inverted"%>
+            </p>
+          </div>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>:
+
+Started POST "/__better_errors/aba7b174fc61563c/variables" for 127.0.0.1 at 2020-10-08 15:21:20 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:21:43 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3978)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms | Allocations: 8455)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <% if flash[:notice] %>
+     <div class="notification is-primary global-notification">
+       <p class="notice"><%= notice %> </p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="notification is-danger global-notification">
+       <p class="alert"><%= alert %></p>
+      </div>
+     <% end %>
+    <nav class="navbar is-info">
+      <div class = "navbar-brand">
+      <%= link_to root_path, class="navbar-item" do %>
+        <h5 class="title is-5">Twitter</h5>
+      <% end %>
+        <div class = "navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweet', new_tweet, class= "button is-info is-inverted"%>
+            </p>
+          </div>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>:
+
+Started POST "/__better_errors/6d6ef14308693c03/variables" for 127.0.0.1 at 2020-10-08 15:21:43 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:22:09 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1009)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 3599)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <% if flash[:notice] %>
+     <div class="notification is-primary global-notification">
+       <p class="notice"><%= notice %> </p>
+     </div>
+     <% end %>
+     <% if flash[:alert] %>
+     <div class="notification is-danger global-notification">
+       <p class="alert"><%= alert %></p>
+      </div>
+     <% end %>
+    <nav class="navbar is-info">
+      <div class = "navbar-brand">
+      <%= link_to root_path, class="navbar-item" do %>
+        <h5 class="title is-5">Twitter</h5>
+      <% end %>
+        <div class = "navbar-burger burger" data-target="navbarExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweet', new_tweet_path, class= "button is-info is-inverted"%>
+            </p>
+          </div>
+      </div>
+    </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>:
+
+Started POST "/__better_errors/6bc0936f2c4b861c/variables" for 127.0.0.1 at 2020-10-08 15:22:09 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:23:03 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms | Allocations: 8573)
+
+
+Started GET "/tweets/new" for 127.0.0.1 at 2020-10-08 15:24:10 -0500
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 33.3ms | Allocations: 9173)
+  Rendered tweets/new.html.erb within layouts/application (Duration: 35.4ms | Allocations: 9507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.0ms | Allocations: 13458)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 15:24:12 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 767)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 4620)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 15:30:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms | Allocations: 6094)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 15:57:38 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 4004)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 590ms (Views: 582.1ms | ActiveRecord: 2.2ms | Allocations: 121703)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:57:49 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 4669)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:57:50 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/index.html.erb:14
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4662)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 15:58:44 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.8ms | Allocations: 800)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1386)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 6478)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:00:22 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.3ms | Allocations: 651)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 4748)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:00:23 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 3.3ms | Allocations: 643)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 4716)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:01:01 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.6ms | Allocations: 788)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1360)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 6433)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:04:00 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.4ms | Allocations: 789)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1361)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 6433)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:04:02 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.8ms | Allocations: 643)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 4728)
+
+
+Started GET "/tweets/2" for 127.0.0.1 at 2020-10-08 16:11:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 14.1ms | ActiveRecord: 0.1ms | Allocations: 8636)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:11:40 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.7ms | Allocations: 790)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 5423)
+
+
+Started GET "/tweets/new" for 127.0.0.1 at 2020-10-08 16:11:42 -0500
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 7.6ms | Allocations: 2868)
+  Rendered tweets/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3195)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 7197)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2020-10-08 16:11:48 -0500
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"kBrsNnvkAY8ZMiUWcZJ3C6GjyX8njt3/JGrX8Q3b8y4ihjKlyFWDcp23bdE15psTS9nx5uu554k7UYQGCC2v6w==", "tweet"=>{"tweet"=>"Hello my name is adan"}, "commit"=>"Create Tweet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("tweet", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["tweet", "Hello my name is adan"], ["created_at", "2020-10-08 21:11:48.354389"], ["updated_at", "2020-10-08 21:11:48.354389"]]
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/tweets/3
+Completed 302 Found in 16ms (ActiveRecord: 6.2ms | Allocations: 4019)
+
+
+Started GET "/tweets/3" for 127.0.0.1 at 2020-10-08 16:11:48 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 4497)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:11:52 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.1ms | Allocations: 656)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 4838)
+
+
+Started GET "/tweets/2" for 127.0.0.1 at 2020-10-08 16:11:55 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4462)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:12:00 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.8ms | Allocations: 656)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 968)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 4843)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:12:22 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 11.0ms | Allocations: 3358)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 4276)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 39.9ms | ActiveRecord: 1.4ms | Allocations: 14045)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:12:25 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.0ms | Allocations: 664)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 980)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 4858)
+
+
+Started DELETE "/tweets/3" for 127.0.0.1 at 2020-10-08 16:13:13 -0500
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BiXwr46mLR2NuTb2UqcZp8vme0a/rPdkGq3E+FM4ZTuWyCx1FhVInFYZhUxyqoynSDDayahzpLf4NDYqb55W9Q==", "id"=>"3"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 18ms (ActiveRecord: 9.3ms | Allocations: 4350)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:13:13 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 3.3ms | Allocations: 643)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.6ms | Allocations: 4738)
+
+
+Started GET "/tweets/2" for 127.0.0.1 at 2020-10-08 16:13:19 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 226)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4744)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:13:21 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.5ms | Allocations: 651)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 856)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 4740)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:13:25 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.3ms | Allocations: 651)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 4743)
+
+
+Started GET "/tweets/new" for 127.0.0.1 at 2020-10-08 16:13:27 -0500
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 17.4ms | Allocations: 2868)
+  Rendered tweets/new.html.erb within layouts/application (Duration: 18.7ms | Allocations: 3196)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 7223)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2020-10-08 16:13:34 -0500
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"GhYH34GUmzwHlHi7w+Jzd2NvfTBwm/yyO9YX7KozUwGoitlMMiUZwYMRMHyHlp9viRVFqbysxsQk7UQbr8UPxA==", "tweet"=>{"tweet"=>"Hello this is a tweet\r\n"}, "commit"=>"Create Tweet"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("tweet", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["tweet", "Hello this is a tweet\r\n"], ["created_at", "2020-10-08 21:13:34.997401"], ["updated_at", "2020-10-08 21:13:34.997401"]]
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/tweets/4
+Completed 302 Found in 13ms (ActiveRecord: 6.4ms | Allocations: 3981)
+
+
+Started GET "/tweets/4" for 127.0.0.1 at 2020-10-08 16:13:35 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 0.5ms | Allocations: 4481)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:13:37 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.5ms | Allocations: 656)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 970)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 4853)
+
+
+Started GET "/tweets/4/edit" for 127.0.0.1 at 2020-10-08 16:13:39 -0500
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 1.8ms | Allocations: 565)
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 807)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 5357)
+
+
+Started GET "/tweets/4" for 127.0.0.1 at 2020-10-08 16:13:41 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4465)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:13:49 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 0.8ms | Allocations: 664)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 976)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4848)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:15:12 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 3.1ms | Allocations: 801)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1485)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 6546)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:15:13 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.1ms | Allocations: 656)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 4847)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-08 16:15:33 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.3ms | Allocations: 801)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1483)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 6559)
+
+
+Started GET "/tweets/4" for 127.0.0.1 at 2020-10-08 16:16:20 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 220)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.1ms | Allocations: 4747)
+
+
+Started GET "/tweets/4/edit" for 127.0.0.1 at 2020-10-08 16:16:22 -0500
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 1.4ms | Allocations: 811)
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 5730)
+
+
+Started PATCH "/tweets/4" for 127.0.0.1 at 2020-10-08 16:16:40 -0500
+Processing by TweetsController#update as HTML
+  Parameters: {"authenticity_token"=>"yB1tpLidLtTf0kfybH+/aCVCBVWrd3cS6OkK570xjxW0J5nAX+2vRlhSWMOJ37EUpUztCaoCYBKttc6zL0Kt6w==", "tweet"=>{"tweet"=>"Hello I just discovered that I'm a hacker"}, "commit"=>"Update Tweet", "id"=>"4"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:44:in `block in update'
+  [1m[36mTweet Update (0.5ms)[0m  [1m[33mUPDATE "tweets" SET "tweet" = ?, "updated_at" = ? WHERE "tweets"."id" = ?[0m  [["tweet", "Hello I just discovered that I'm a hacker"], ["updated_at", "2020-10-08 21:16:40.924695"], ["id", 4]]
+  ↳ app/controllers/tweets_controller.rb:44:in `block in update'
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/tweets/4
+Completed 302 Found in 22ms (ActiveRecord: 9.3ms | Allocations: 4483)
+
+
+Started GET "/tweets/4" for 127.0.0.1 at 2020-10-08 16:16:40 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 4474)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:16:44 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.0ms | Allocations: 657)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 969)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 4830)
+
+
+Started DELETE "/tweets/2" for 127.0.0.1 at 2020-10-08 16:16:55 -0500
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"foQANV4F/Uec2u0rHNipSKi8dKf1OzGX8KrlxvVadljuadzvxraYxkd6XpE81TxIK2rVKOLkYkQSMxcUyfxFlg==", "id"=>"2"}
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+  [1m[36mTweet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 19ms (ActiveRecord: 9.0ms | Allocations: 3878)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:16:55 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.1ms | Allocations: 644)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 846)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.4ms | Allocations: 4748)
+
+
+Started DELETE "/tweets/4" for 127.0.0.1 at 2020-10-08 16:16:58 -0500
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ErDLlDz4zNiZpwBtBwj60XgXzDE80vEdfpsCZRvOThqCXRdOpEupWUIHs9cnBW/R+8FtvisNos6cAvC3J2h91A==", "id"=>"4"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 16ms (ActiveRecord: 6.3ms | Allocations: 3865)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:16:58 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.3ms | Allocations: 630)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 4618)
+
+
+Started GET "/tweets/new" for 127.0.0.1 at 2020-10-08 16:17:17 -0500
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 1.5ms | Allocations: 508)
+  Rendered tweets/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 699)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 4690)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2020-10-08 16:17:22 -0500
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"l2ByJYv5xKxj3P3n0/6lFKeEyiy8Ch6ndSPb4lMvBiYl/Ky2OEhGUedZtSCXikkMTf7ytXA9JNFqGIgVVtla4w==", "tweet"=>{"tweet"=>"new tweet\r\n"}, "commit"=>"Create Tweet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("tweet", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["tweet", "new tweet\r\n"], ["created_at", "2020-10-08 21:17:22.965625"], ["updated_at", "2020-10-08 21:17:22.965625"]]
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/tweets/5
+Completed 302 Found in 18ms (ActiveRecord: 8.2ms | Allocations: 3801)
+
+
+Started GET "/tweets/5" for 127.0.0.1 at 2020-10-08 16:17:23 -0500
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 4484)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:17:25 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.0ms | Allocations: 643)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 847)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms | Allocations: 4715)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:30:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_feed.html.erb (Duration: 8.7ms | Allocations: 6791)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 7219)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 8555)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="column is-half">
+    <article class="media box">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/64x64.png">
+            </p>
+        </figure>
+        <div class = "media-content">
+        </div>
+    </article>
+</div>
+<% @tweets.each do |tweet| %>
+    <div class="box">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <strong>Adan Fernandez</strong><br/>
+                    <small>@balerum03</small><br/>
+                    <p><%= tweet.tweet %></p>
+                </div>
+                <nav class="level">
+                    <div class="level-left is-mobile">
+                        <% link_to tweet, class: "level-item" do %>
+                            <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to tweet, method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"
+                            }do %>
+                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                            <% end %>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
+<%end%>:
+  app/views/tweets/index.html.erb:4
+
+Started POST "/__better_errors/e9caef9aed961f7b/variables" for 127.0.0.1 at 2020-10-08 16:30:40 -0500
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:32:17 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_feed.html.erb (Duration: 0.9ms | Allocations: 1310)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1372)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1875)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="column is-half">
+    <article class="media box">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/64x64.png">
+            </p>
+        </figure>
+        <div class = "media-content">
+        </div>
+    </article>
+</div>
+<% @tweets.each do |tweet| %>
+    <div class="box">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <strong>Adan Fernandez</strong><br/>
+                    <small>@balerum03</small><br/>
+                    <p><%= tweet.tweet %></p>
+                </div>
+                <nav class="level">
+                    <div class="level-left is-mobile">
+                        <% link_to tweet, class: "level-item" do %>
+                            <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to tweet, method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"
+                            }do %>
+                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                            <% end %>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
+<%end%>:
+  app/views/tweets/index.html.erb:4
+
+Started POST "/__better_errors/755053f2f2b129ce/variables" for 127.0.0.1 at 2020-10-08 16:32:18 -0500
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:39:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_feed.html.erb (Duration: 2.8ms | Allocations: 1360)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1788)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 3120)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="column is-half">
+    <article class="media box">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/64x64.png">
+            </p>
+        </figure>
+        <div class = "media-content">
+        </div>
+    </article>
+</div>
+<% @tweets.each do |tweet| %>
+    <div class="box">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <strong>Adan Fernandez</strong><br/>
+                    <small>@balerum03</small><br/>
+                    <p><%= tweet.tweet %></p>
+                </div>
+                <nav class="level">
+                    <div class="level-left is-mobile">
+                        <% link_to tweet, class: "level-item" do %>
+                            <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to edit_tweet_path(tweet), class: "level-item" do%>
+                            <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to tweet, method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"
+                            }do %>
+                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                            <% end %>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
+<%end%>:
+  app/views/tweets/index.html.erb:4
+
+Started POST "/__better_errors/b223d3ff765f24bf/variables" for 127.0.0.1 at 2020-10-08 16:39:32 -0500
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:40:56 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_feed.html.erb (Duration: 1.4ms | Allocations: 1360)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1789)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3121)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="column is-half">
+    <article class="media box">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/64x64.png">
+            </p>
+        </figure>
+        <div class = "media-content">
+        </div>
+    </article>
+</div>
+<% @tweets.each do |tweet| %>
+    <div class="box">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <strong>Adan Fernandez</strong><br/>
+                    <small>@balerum03</small><br/>
+                    <p><%= tweet.tweet %></p>
+                </div>
+                <nav class="level">
+                    <div class="level-left is-mobile">
+                        <% link_to tweet, class: "level-item" do %>
+                            <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to edit_tweet_path(tweet), class: "level-item" do%>
+                            <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to tweet, method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"
+                            }do %>
+                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                            <% end %>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
+<%end%>:
+  app/views/tweets/index.html.erb:4
+
+Started POST "/__better_errors/9a8c84d307d9a361/variables" for 127.0.0.1 at 2020-10-08 16:40:57 -0500
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:41:06 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_feed.html.erb (Duration: 0.6ms | Allocations: 1360)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1786)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3118)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="column is-half">
+    <article class="media box">
+        <figure class="media-left">
+            <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/64x64.png">
+            </p>
+        </figure>
+        <div class = "media-content">
+        </div>
+    </article>
+</div>
+<% @tweets.each do |tweet| %>
+    <div class="box">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <strong>Adan Fernandez</strong><br/>
+                    <small>@balerum03</small><br/>
+                    <p><%= tweet.tweet %></p>
+                </div>
+                <nav class="level">
+                    <div class="level-left is-mobile">
+                        <% link_to tweet, class: "level-item" do %>
+                            <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to edit_tweet_path(tweet), class: "level-item" do%>
+                            <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                        <% end %>
+                        <%= link_to tweet, method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"
+                            }do %>
+                                <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                            <% end %>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div>
+<%end%>:
+  app/views/tweets/index.html.erb:4
+
+Started POST "/__better_errors/a57006e2dcacfd21/variables" for 127.0.0.1 at 2020-10-08 16:41:06 -0500
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:44:05 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 4.5ms | Allocations: 1095)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1651)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms | Allocations: 7394)
+
+
+Started GET "/tweets/5/edit" for 127.0.0.1 at 2020-10-08 16:46:10 -0500
+Processing by TweetsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:67:in `set_tweet'
+  Rendering tweets/edit.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (Duration: 4.3ms | Allocations: 811)
+  Rendered tweets/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 6327)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:47:11 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 4.5ms | Allocations: 1085)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.2ms | Allocations: 7341)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:49:35 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.5ms | Allocations: 1086)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1638)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 7310)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:49:56 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.8ms | Allocations: 1086)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1638)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 7319)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:50:05 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.0ms | Allocations: 1085)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1637)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 7315)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:50:20 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 4.7ms | Allocations: 1086)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1642)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.7ms | Allocations: 7351)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:50:54 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.2ms | Allocations: 1086)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1640)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 7332)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:51:03 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 1.4ms | Allocations: 1086)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1638)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 7313)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:51:21 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.8ms | Allocations: 1085)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms | Allocations: 7350)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:52:27 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 6.0ms | Allocations: 1086)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1638)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.3ms | Allocations: 7316)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:52:45 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.2ms | Allocations: 1084)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1636)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 7323)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 16:52:57 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 4.7ms | Allocations: 1083)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.7ms | Allocations: 7361)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:08:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 2.6ms | Allocations: 1085)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 7443)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:09:16 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 3.7ms | Allocations: 1082)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 1.0ms | Allocations: 123)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1703)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 7392)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:15:48 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.3ms | Allocations: 101)
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 4.7ms | Allocations: 1084)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.4ms | Allocations: 122)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.3ms | Allocations: 7729)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:23:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 4.0ms | Allocations: 1399)
+  Rendered tweets/_feed.html.erb (Duration: 7.1ms | Allocations: 1904)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2520)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3850)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/c0567c692daf2c51/variables" for 127.0.0.1 at 2020-10-08 17:23:23 -0500
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:24:37 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered tweets/_feed.html.erb (Duration: 1.8ms | Allocations: 1847)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2470)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3805)
+
+
+
+ActionView::MissingTemplate - Missing partial tweet/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/oem/Desktop/Microverse/rails/RoR-members-only/app/views"
+  * "/var/lib/gems/2.7.0/gems/devise-4.7.3/app/views"
+  * "/var/lib/gems/2.7.0/gems/actiontext-6.0.3.4/app/views"
+  * "/var/lib/gems/2.7.0/gems/actionmailbox-6.0.3.4/app/views":
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/52ad09a05c42c504/variables" for 127.0.0.1 at 2020-10-08 17:24:37 -0500
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:25:10 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.5ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 1.4ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 3.2ms | Allocations: 1899)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2520)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3856)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/ed003f58f2de8dd3/variables" for 127.0.0.1 at 2020-10-08 17:25:11 -0500
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:25:18 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 6.2ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 7.5ms | Allocations: 1895)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2518)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3854)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/a3cb125d065f1aff/variables" for 127.0.0.1 at 2020-10-08 17:25:19 -0500
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:26:48 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.6ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 1.4ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 3.1ms | Allocations: 1891)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2512)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3848)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/8a61882040b19803/variables" for 127.0.0.1 at 2020-10-08 17:26:48 -0500
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:27:21 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 0.9ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 2.0ms | Allocations: 1899)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2520)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3856)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/e96e9ff7d0bda100/variables" for 127.0.0.1 at 2020-10-08 17:27:21 -0500
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:30:25 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 1.2ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 2.8ms | Allocations: 1897)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2516)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3852)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/6a20ee16e7282781/variables" for 127.0.0.1 at 2020-10-08 17:30:26 -0500
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:31:20 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 0.8ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 1.7ms | Allocations: 1895)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2518)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3854)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/c9528f87587b78a9/variables" for 127.0.0.1 at 2020-10-08 17:31:20 -0500
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:32:40 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 1.4ms | Allocations: 1333)
+  Rendered tweets/_feed.html.erb (Duration: 1.8ms | Allocations: 1399)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1523)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms | Allocations: 4946)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notifications %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/6e619806d7581224/variables" for 127.0.0.1 at 2020-10-08 17:32:40 -0500
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:33:13 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 0.7ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 1.3ms | Allocations: 1895)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2516)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3865)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notification %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/4e43c369c7a2ff1c/variables" for 127.0.0.1 at 2020-10-08 17:33:13 -0500
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:33:40 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 1.2ms | Allocations: 1393)
+  Rendered tweets/_feed.html.erb (Duration: 1.9ms | Allocations: 1897)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2520)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3869)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= simple_form_for(@tweet) do |f| %>
+<%= f.error_notification %>
+<div class="fields">
+  <div class="control">
+    <%= f.input :tweet, label: "Tweet about it", input_html: { class: "textarea "}. wrapper: false, label_html: {class: "label"}, placeholder: "Compse a new Tweet..." %>
+  </div>
+</div>
+<%= f.button :submit, class: "button is-info" %>
+<% end %>:
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/4116206d46eb66a9/variables" for 127.0.0.1 at 2020-10-08 17:33:41 -0500
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/__better_errors/4116206d46eb66a9/variables" for 127.0.0.1 at 2020-10-08 17:34:14 -0500
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:37:18 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 53.3ms | Allocations: 19127)
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 55.7ms | Allocations: 20406)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.2ms | Allocations: 127)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 57.4ms | Allocations: 21349)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.2ms | Allocations: 27009)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-08 17:38:47 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered tweets/_form.html.erb (Duration: 8.1ms | Allocations: 3136)
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:14
+  Rendered tweets/_feed.html.erb (Duration: 15.3ms | Allocations: 4414)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.9ms | Allocations: 122)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 5343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.5ms | Allocations: 10944)
+
+

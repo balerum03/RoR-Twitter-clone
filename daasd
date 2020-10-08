@@ -1,0 +1,23 @@
+[33mcommit e7d99f431606ddfeacb6856c783efa489c747665[m[33m ([m[1;36mHEAD -> [m[1;32mauthentication_feature[m[33m, [m[1;31morigin/authentication_feature[m[33m)[m
+Author: bmuhamood <bbosa2009@gmail.com>
+Date:   Thu Oct 8 23:06:38 2020 +0400
+
+    Scaffold tweet
+
+[33mcommit 3b78fe1a5d95d1623a5f3866fdf3a949d9929f68[m
+Author: bmuhamood <bbosa2009@gmail.com>
+Date:   Thu Oct 8 21:33:14 2020 +0400
+
+    added controllers and some table
+
+[33mcommit e32a6f2accf369673b2b30a1ebcbab27d602928f[m
+Author: balerum03 <adafer123.angra@gmail.com>
+Date:   Thu Oct 8 11:48:24 2020 -0500
+
+    Created User and Post models and installed devise gem
+
+[33mcommit d3738105b66c3702f52f09e269ef9938f4af5d83[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Development[m[33m, [m[1;32mDevelopment[m[33m)[m
+Author: Adan Fernandez <37203751+balerum03@users.noreply.github.com>
+Date:   Thu Oct 8 10:18:23 2020 -0500
+
+    Initial commit
