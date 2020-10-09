@@ -4535,3 +4535,621 @@ Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 80
 ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
 
 Started POST "/__better_errors/961316a215bfd11e/variables" for 127.0.0.1 at 2020-10-09 15:02:27 -0500
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 15:07:45 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 593)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.8ms | Allocations: 19525)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 42.9ms | ActiveRecord: 0.4ms | Allocations: 39077)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:07:55 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"GIvEYofsF+sR0drV6qErbD0C/mnRUM7EuKaSd0PiH6DXnIvgzS8n9g8X1gnbxaX+xekGcb5c90gyNn1OP5T1gQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :username[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "thisisatestemail@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "thisisatestemail@gmail.com"], ["encrypted_password", "$2a$12$dFsyITcBpO5iPVCsg8OOMejNWh70VGD21Yg6vbjiIfVO0jJZ/45/O"], ["created_at", "2020-10-09 20:07:55.222407"], ["updated_at", "2020-10-09 20:07:55.222407"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 230ms (ActiveRecord: 6.7ms | Allocations: 11181)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 15:07:55 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 101)
+  Rendered tweets/_form.html.erb (Duration: 4.0ms | Allocations: 3367)
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 7.2ms | Allocations: 4987)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 5937)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 14585)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2020-10-09 15:09:12 -0500
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"Vi624Hr9kp0HutO4/x5TyJHD38UwgcmXLeaOoRWaHpGZOfliMD6igBl832TOet1aaSgn3V+N8BundmGYaez0sA==", "tweet"=>{"tweet"=>"4th tweet"}, "commit"=>"Create Tweet"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31:in `block in create'
+  [1m[36mTweet Create (2.0ms)[0m  [1m[32mINSERT INTO "tweets" ("tweet", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["tweet", "4th tweet"], ["created_at", "2020-10-09 20:09:12.569673"], ["updated_at", "2020-10-09 20:09:12.569673"], ["user_id", 2]]
+  ↳ app/controllers/tweets_controller.rb:31:in `block in create'
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms (ActiveRecord: 11.7ms | Allocations: 14391)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 15:09:12 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 2.8ms | Allocations: 2993)
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 4.6ms | Allocations: 4280)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4464)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 8909)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 15:17:09 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 606)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 19424)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 46.7ms | ActiveRecord: 0.9ms | Allocations: 41391)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:17:47 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"sbg7FpgS2RkYZuAEF2jjpXkXgjFjJ50MMe+6hehqFjh+r3SU0tHpBAag7NgmDG03gfx6KQwrpIC7f1W8lBz8GQ==", "user"=>{"name"=>"Adan Fernandez", "username"=>"Balerum04", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 9443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 23.6ms | ActiveRecord: 0.3ms | Allocations: 22410)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:18:03 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"ftOKZZ1hJfMAoJ9wpDzh/HWWDPvGVsYdXfWvb+UVEl2xxMXn16IV7h5mk6yVWG9ujX3046la/5HXZUBWmWP4fA==", "user"=>{"name"=>"Adan Fernandez", "username"=>"Balerum04", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 9405)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 25.2ms | ActiveRecord: 0.6ms | Allocations: 20222)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:18:17 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"zmVxxDsboG7GWR0T6Bg/fn+fNpfdJNCyvhMikERd+1IBcj5GcdiQc9ifEc/ZfLHsh3TOj7Io6T40g82pOCsRcw==", "user"=>{"name"=>"Adan Fernandez", "username"=>"Balerum04", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.9ms | Allocations: 9408)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 34.8ms | ActiveRecord: 0.2ms | Allocations: 20269)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:18:32 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"mLzNPoJVoK2GIRmVjBd79OlrBmVTcDhh/qz3kxyFmBdXq4K8yJaQsJjnFUm9c/VmEYD+fTx8Ae10PBiqYPNyNg==", "user"=>{"name"=>"Adan Fernandez", "username"=>"Balerum04", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 9419)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 19.2ms | ActiveRecord: 0.4ms | Allocations: 20258)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:18:52 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"wh/7JQxihHZodQc4TXkbZkcUA6a4MEaL1MdVsp4jX2wNCLSnRqG0a3azC+R8HZX0v//7vtc8fwdeV7qL4lW1TQ==", "user"=>{"name"=>"Juan perez", "username"=>"pepejuan", "email"=>"pepejuan@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pepejuan@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 9405)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 0.4ms | Allocations: 20246)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:19:31 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"0ig4T0BCbhb7MHYCpnDr2KMRfejBSThR3e45zI2MkEodP3fNCoFeC+X2et6XFGVKW/qF8K5FAd1Xftb18fp6aw==", "user"=>{"name"=>"Ana Maria", "username"=>"MariaJuana", "email"=>"Maria@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "maria@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 9406)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 0.2ms | Allocations: 20256)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:19:44 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"1XQL88MZbkWH44doyrEx3sIHH3bPVo5bg5NQXdS2MS8aY0RxidpeWJkli7T71b9MOuznbqBat9cJA79kqMDbDg==", "user"=>{"name"=>"Ana Maria", "username"=>"MariaJuana", "email"=>"maria@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "maria@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 9426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 19.4ms | ActiveRecord: 0.4ms | Allocations: 20210)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:22:43 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"C0ezeD7t+oq0VWi3GpxjplgdA00Ee+P7vIsLmjQH63nEUPz6dC7Kl6qTZGsr+O00oPb7VWt32nc2G+SjSHEBWA==", "user"=>{"name"=>"Ana Maria", "username"=>"MariaJuana", "email"=>"maria@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :username[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "maria@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "maria@gmail.com"], ["encrypted_password", "$2a$12$0..SIb4Y4OrxIYnuH6CGVuko/iKeYu96Lcxbi2ACRWQIkcFlW6Dve"], ["created_at", "2020-10-09 20:22:43.817067"], ["updated_at", "2020-10-09 20:22:43.817067"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 247ms (ActiveRecord: 7.6ms | Allocations: 17275)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 15:22:43 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 101)
+  Rendered tweets/_form.html.erb (Duration: 5.0ms | Allocations: 3358)
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 8.0ms | Allocations: 5118)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 6068)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 13.7ms | ActiveRecord: 1.3ms | Allocations: 14699)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 15:24:18 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 0.8ms | Allocations: 10277)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 15:24:18 -0500
+
+ActionController::RoutingError - uninitialized constant TweeetsController
+Did you mean?  TweetsController:
+
+Started POST "/__better_errors/e008d9df9413c117/variables" for 127.0.0.1 at 2020-10-09 15:24:18 -0500
+Started GET "/" for 127.0.0.1 at 2020-10-09 15:24:34 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweets/_feed.html.erb:9
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweets/_feed.html.erb:9
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweets/_feed.html.erb:9
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/tweets/_feed.html.erb:9
+  Rendered tweets/_form.html.erb (Duration: 190.0ms | Allocations: 85457)
+  Rendered tweets/_feed.html.erb (Duration: 190.4ms | Allocations: 85523)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 191.0ms | Allocations: 85646)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 1.2ms | Allocations: 89656)
+
+
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `tweets_path' for #<#<Class:0x0000557704826ee8>:0x00005577048248c8>
+Did you mean?  tweeets_path
+               tweeet_path:
+  app/views/tweets/_form.html.erb:1
+  app/views/tweets/_feed.html.erb:9
+  app/views/tweets/index.html.erb:5
+
+Started POST "/__better_errors/d7c475c6c9814528/variables" for 127.0.0.1 at 2020-10-09 15:24:35 -0500
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Tweet Load (0.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2020-10-09 15:24:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 11.1ms | Allocations: 3024)
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 15.7ms | Allocations: 4324)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 25.0ms | ActiveRecord: 1.6ms | Allocations: 12475)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 15:24:57 -0500
+Processing by RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 19ms (ActiveRecord: 0.6ms | Allocations: 10068)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 15:24:57 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 4.2ms | Allocations: 2991)
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 7.0ms | Allocations: 4274)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4457)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms | Allocations: 8950)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 15:26:33 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegistrationsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 536)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 31.3ms | Allocations: 19492)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 53.9ms | ActiveRecord: 0.9ms | Allocations: 41418)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:26:45 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"s/psJRxOOQR/2jPW2RD0XUr4CMVpRcGbO3fi0jxP+9F87SOnVo0JGWEcPwrodHrPshPw3QZJ+Bex5w3rQDkR8A==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 9428)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 18.3ms | ActiveRecord: 0.4ms | Allocations: 22353)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:26:53 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"Fl2g/hxvjcKDh2nf/n521525TA4AVYswI+tARHUggfXZSu98Vqy9351BZQPPGvhFZVK0Fm9Zsrype699CVZr1A==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 9412)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 26.7ms | ActiveRecord: 0.6ms | Allocations: 20264)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:29:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"9XbLkdamHlGjFbSKOjKNJEidfWCxwrl9CHqXHdKX4OI6YYQTnGUuTL3TuFYLVgO2sHaFeN7OgPGC6ngkruEKww==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 9796)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 18.4ms | ActiveRecord: 4.3ms | Allocations: 29406)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:50:15 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+ActionController::RoutingError - uninitialized constant RegistrationController
+Did you mean?  RegistrationsController:
+
+Started POST "/__better_errors/3e91357735ce7412/variables" for 127.0.0.1 at 2020-10-09 15:50:15 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:50:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"NVw17RCXSWhVp3HwBGY028AzoWEfLku5/w1QbnNGp1H6S3pvWlR5dUthfSw1ArpJONhZeXAicjV1nb9XDzBNcA==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 89)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 9856)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 25.8ms | ActiveRecord: 1.6ms | Allocations: 29443)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 16:01:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"Q8DY1m1KKprekqyra07DKy6T6G8ZNLk3pD7MzZW2kTKM15dUJ4kah8BUoHdaKk251ngQd3Y4gLsuriP06cB7Ew==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 9762)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 25.7ms | ActiveRecord: 0.2ms | Allocations: 28654)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-10-09 16:01:58 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 16:02:18 -0500
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 89)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 9725)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 20.0ms | ActiveRecord: 0.8ms | Allocations: 22735)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 16:02:32 -0500
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"NBj66JfKkAt1DuuoCrdO4sABeOsere1igVgNesA8Ng77D7Vq3QmgFmvI53Q708BwOOqA83Gh1O4LyOJDvErcLw==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"hello@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "hello@test.com"], ["encrypted_password", "$2a$12$5bJoPvmfMxmR2ozOO.Cc7eEF/6pkXdaTIzGaACNvo3Nlc1nwXZJre"], ["created_at", "2020-10-09 21:02:32.376477"], ["updated_at", "2020-10-09 21:02:32.376477"], ["name", "Bbosa"], ["username", "Bbosa009"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 237ms (ActiveRecord: 9.3ms | Allocations: 12718)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 16:02:32 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered tweets/_form.html.erb (Duration: 6.2ms | Allocations: 3314)
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 11.4ms | Allocations: 5074)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 6023)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 23.9ms | ActiveRecord: 1.0ms | Allocations: 14810)
+
+
+Started DELETE "/tweets/14" for 127.0.0.1 at 2020-10-09 16:02:51 -0500
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2GwxXjLMpXSMMHoPrgleN3KrbsLbf3cW01bPNFWrF3sXe37ceA+VaZL2dtOfbdClikCW2rRzTppZxiANKd39Wg==", "id"=>"14"}
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:68:in `set_tweet'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 22ms (ActiveRecord: 10.4ms | Allocations: 5541)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-09 16:02:51 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 2.9ms | Allocations: 3000)
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 4.5ms | Allocations: 4138)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 8760)
+
+
+Started DELETE "/tweets/12" for 127.0.0.1 at 2020-10-09 16:02:55 -0500
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"27rywqpoxfsbG6KHr9g4BthhsIixK/cixJzllHbZQqcUrb1A4Kv15gXdrluevLaUIIpIkN4nzq5ODAqtCq+ohg==", "id"=>"12"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:68:in `set_tweet'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 21ms (ActiveRecord: 10.8ms | Allocations: 5316)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-09 16:02:55 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 4.3ms | Allocations: 2997)
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 9.4ms | Allocations: 3984)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 4167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms | Allocations: 8598)
+
+
+Started DELETE "/tweets/11" for 127.0.0.1 at 2020-10-09 16:02:56 -0500
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"awHgsXr/+zOswPL/rplfjYjm3f0uIcW67YgpSQyMKjSkFq8zMDzLLrIG/iOf/dEfcA0l5UEt/DZnGMZwcPrAFQ==", "id"=>"11"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:68:in `set_tweet'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[36mTweet Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 13ms (ActiveRecord: 5.9ms | Allocations: 5324)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-09 16:02:57 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 7.7ms | Allocations: 2998)
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 10.7ms | Allocations: 3837)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 4020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.4ms | Allocations: 8515)
+
+
+Started DELETE "/tweets/9" for 127.0.0.1 at 2020-10-09 16:02:59 -0500
+Processing by TweetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qLAo5b4+SFXgiMXYuQQNrCVihJNYr46LV1ONABi7T51np2dn9P14SP5OyQSIYIM+3Yl8izejtwfdw2I5ZM2lvA==", "id"=>"9"}
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:68:in `set_tweet'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:58:in `destroy'
+Redirected to http://localhost:3000/tweets
+Completed 302 Found in 21ms (ActiveRecord: 9.6ms | Allocations: 5319)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-10-09 16:02:59 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 3.3ms | Allocations: 3000)
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 4.8ms | Allocations: 3838)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms | Allocations: 8510)
+
+
+Started POST "/tweets" for 127.0.0.1 at 2020-10-09 16:03:20 -0500
+Processing by TweetsController#create as HTML
+  Parameters: {"authenticity_token"=>"i9OM88zGmYI6oXBW/crTrgYmojXl2RPPI+YzNvpXlspExMNxhgWpnyRnfIrMrl08/s1aLYrVKkOpdtwPhiF86w==", "tweet"=>{"tweet"=>"This is a tweet generated by an actual user."}, "commit"=>"Create Tweet"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31:in `block in create'
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("tweet", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["tweet", "This is a tweet generated by an actual user."], ["created_at", "2020-10-09 21:03:20.655064"], ["updated_at", "2020-10-09 21:03:20.655064"], ["user_id", 4]]
+  ↳ app/controllers/tweets_controller.rb:31:in `block in create'
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 9.0ms | Allocations: 11812)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 16:03:20 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered tweets/_form.html.erb (Duration: 3.4ms | Allocations: 2997)
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 4.8ms | Allocations: 3837)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 8510)
+
+
