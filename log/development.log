@@ -4193,3 +4193,345 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 12958)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToTweets (20201009190612)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "tweets" ADD "user_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201009190612"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 14:17:36 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 519)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 47.8ms | Allocations: 19062)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 68.6ms | ActiveRecord: 0.9ms | Allocations: 37075)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 14:17:56 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.8ms | Allocations: 9347)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 13886)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 14:18:34 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 463)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 10166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 16272)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:19:31 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Adan Fernandez", "username"=>"Balerum03", "email"=>"test.email@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :username[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test.email@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "test.email@test.com"], ["encrypted_password", "$2a$12$lTiyZcgGwJJRTfyoQuJz.eBHoVFUwFd3zrrasNl3sODbhfdzU/ehy"], ["created_at", "2020-10-09 19:19:31.958041"], ["updated_at", "2020-10-09 19:19:31.958041"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/edit
+Completed 302 Found in 234ms (ActiveRecord: 6.5ms | Allocations: 11628)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2020-10-09 14:19:32 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 21.5ms | Allocations: 10308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.3ms | Allocations: 16514)
+
+
+Started DELETE "/users" for 127.0.0.1 at 2020-10-09 14:19:47 -0500
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TXaira7D5dhFeSyo6zVeQh35vk0/1mJJxreo3FhsWHDdm353NnCAWZ7ZnxLLOMtCni8fwigJMZokLloOZMprvg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 6.6ms | Allocations: 7169)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-09 14:19:47 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_trends.html.erb (Duration: 0.2ms | Allocations: 101)
+  Rendered tweets/_form.html.erb (Duration: 6.7ms | Allocations: 3321)
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY created_at DESC[0m
+  ↳ app/views/tweets/_feed.html.erb:12
+  Rendered tweets/_feed.html.erb (Duration: 12.0ms | Allocations: 4927)
+  Rendered tweets/_who-to-follow.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered tweets/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 5875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 23.0ms | ActiveRecord: 2.0ms | Allocations: 14635)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:20:05 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Adan Fernandez", "username"=>"Balerum03", "email"=>"test.email@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 810)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/4d382941e4d96442/variables" for 127.0.0.1 at 2020-10-09 14:20:05 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:22:18 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/d13303474f4f7263/variables" for 127.0.0.1 at 2020-10-09 14:22:18 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:28:35 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/5430989c77341045/variables" for 127.0.0.1 at 2020-10-09 14:28:35 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:41:49 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.0ms | Allocations: 946)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/05f4b07cb2b16764/variables" for 127.0.0.1 at 2020-10-09 14:41:49 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:42:00 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/e1d555d4e3df3ed6/variables" for 127.0.0.1 at 2020-10-09 14:42:00 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:43:17 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/a4a459fedc90ab23/variables" for 127.0.0.1 at 2020-10-09 14:43:17 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:43:24 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/a8df7faade399c53/variables" for 127.0.0.1 at 2020-10-09 14:43:25 -0500
+Started POST "/__better_errors/a8df7faade399c53/variables" for 127.0.0.1 at 2020-10-09 14:46:55 -0500
+Started POST "/__better_errors/a8df7faade399c53/variables" for 127.0.0.1 at 2020-10-09 14:46:59 -0500
+Started POST "/__better_errors/a8df7faade399c53/variables" for 127.0.0.1 at 2020-10-09 14:47:01 -0500
+Started POST "/__better_errors/a8df7faade399c53/variables" for 127.0.0.1 at 2020-10-09 14:47:06 -0500
+Started POST "/__better_errors/a8df7faade399c53/variables" for 127.0.0.1 at 2020-10-09 14:47:09 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:49:00 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/f8c299714d4f9823/variables" for 127.0.0.1 at 2020-10-09 14:49:01 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:49:10 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/4be24ce665536395/variables" for 127.0.0.1 at 2020-10-09 14:49:10 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:49:30 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.0ms | Allocations: 946)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/4abde9a9cb1297ec/variables" for 127.0.0.1 at 2020-10-09 14:49:30 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:51:51 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/7a9f7c16d5d996c2/variables" for 127.0.0.1 at 2020-10-09 14:51:51 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:51:55 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/1879e629d4c4abe0/variables" for 127.0.0.1 at 2020-10-09 14:51:56 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:54:02 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/c4c427192ac420e4/variables" for 127.0.0.1 at 2020-10-09 14:54:03 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:54:07 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms | Allocations: 803)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/168d9e985de579a5/variables" for 127.0.0.1 at 2020-10-09 14:54:07 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:54:19 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/08519eaff6d98d76/variables" for 127.0.0.1 at 2020-10-09 14:54:19 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:56:35 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/2ee5427ea05c0da3/variables" for 127.0.0.1 at 2020-10-09 14:56:35 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:57:41 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/bc89fbb797a0bc53/variables" for 127.0.0.1 at 2020-10-09 14:57:42 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 14:58:32 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/198cd3ce21565fe6/variables" for 127.0.0.1 at 2020-10-09 14:58:32 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:01:05 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/4e92f2f58416a9cf/variables" for 127.0.0.1 at 2020-10-09 15:01:05 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:01:19 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/2b00158801b0b4fc/variables" for 127.0.0.1 at 2020-10-09 15:01:20 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:02:09 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/51806267f741dafd/variables" for 127.0.0.1 at 2020-10-09 15:02:10 -0500
+Started POST "/users" for 127.0.0.1 at 2020-10-09 15:02:27 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"r+8jHVHNfs2x6D1kJWnlosPCoGDJsPKYzu+P7rV2j5c/Av/HyX4bTGpIjt4FZHCiQBQB795voUssdn08idC8WQ==", "user"=>{"name"=>"Bbosa", "username"=>"Bbosa009", "email"=>"thisisatestemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/961316a215bfd11e/variables" for 127.0.0.1 at 2020-10-09 15:02:27 -0500
