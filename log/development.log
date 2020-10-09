@@ -3137,3 +3137,403 @@ Migrating to DeviseCreateUsers (20201009151824)
   [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 19:27:14 +0400
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 10.2ms | Allocations: 523)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 431.9ms | Allocations: 17352)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 906ms (Views: 876.5ms | ActiveRecord: 0.9ms | Allocations: 38898)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-10-09 19:28:11 +0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 201)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 129.8ms | Allocations: 9457)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 181ms (Views: 140.6ms | ActiveRecord: 0.0ms | Allocations: 15699)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 19:28:14 +0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 81)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.4ms | Allocations: 6491)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 168ms (Views: 164.9ms | ActiveRecord: 0.0ms | Allocations: 11534)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-10-09 19:28:17 +0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 8657)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms | Allocations: 13744)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2020-10-09 19:28:19 +0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 138)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 3556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms | Allocations: 9264)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2020-10-09 19:28:23 +0400
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"authenticity_token"=>"PcLVnwGngvH2VSxgeovy7V8ApfSDsPPV95s2ZLsc6Fkxrt4wb1BYDAyQCKT98vTjPDDc12MIQYdgFzPinanOHg==", "user"=>{"email"=>"bbosa2009@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "bbosa2009@gmail.com"], ["LIMIT", 1]]
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 129)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 20.0ms | Allocations: 3401)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 182ms (Views: 41.7ms | ActiveRecord: 0.5ms | Allocations: 12899)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-10-09 19:29:34 +0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.5ms | Allocations: 8666)
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 19:29:35 +0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 81)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 57.5ms | Allocations: 6499)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 19:29:36 +0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 80)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.4ms | Allocations: 6480)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1834ms (Views: 1832.3ms | ActiveRecord: 0.0ms | Allocations: 25366)
+
+
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms | Allocations: 12021)
+
+
+Completed 200 OK in 2508ms (Views: 2505.6ms | ActiveRecord: 0.0ms | Allocations: 40571)
+
+
+  [1m[35m (18.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddfieldsToUsers (20201009154003)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (18.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddfieldsToUsers (20201009154003)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (33.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddfieldsToUsers (20201009154003)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201009154003"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:35:10 +0400
+  [1m[35m (30.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (22.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 107.3ms | Allocations: 1593)
+Completed 500 Internal Server Error in 571ms (ActiveRecord: 0.9ms | Allocations: 12764)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="section">
+  <div class="container">
+    <div class="column is-centered">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+    <%= f.input :email, required: true, autofocus: true%>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password_confirmation, required: true %>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <%= f.button :submit, "Sign up", class: "button is-info is-medium" %>
+  </div>
+</div>
+<% end %>
+<% end %>
+<%= render "devise/shared/links" %>
+     </div>
+   </div>
+</div>:
+
+Started POST "/__better_errors/3c6698987a383e0f/variables" for 127.0.0.1 at 2020-10-09 20:35:20 +0400
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:37:49 +0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1242)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3023)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="section">
+  <div class="container">
+    <div class="column is-centered">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password_confirmation, required: true %>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <%= f.button :submit, "Sign up", class: "button is-info is-medium" %>
+  </div>
+</div>
+<% end %>
+<% end %>
+<%= render "devise/shared/links" %>
+     </div>
+   </div>
+</div>:
+
+Started POST "/__better_errors/2548aec72ee7e406/variables" for 127.0.0.1 at 2020-10-09 20:37:49 +0400
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:40:47 +0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1245)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 3036)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="section">
+  <div class="container">
+    <div class="column is-centered">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password_confirmation, required: true %>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <%= f.button :submit, "Sign up", class:"button is-info is-medium" %>
+  </div>
+</div>
+<% end %>
+<% end %>
+<%= render "devise/shared/links" %>
+     </div>
+   </div>
+</div>:
+
+Started POST "/__better_errors/b0d56e87cf65aeaf/variables" for 127.0.0.1 at 2020-10-09 20:40:47 +0400
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:42:25 +0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 13.8ms | Allocations: 520)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 322.1ms | Allocations: 18343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 696ms (Views: 694.7ms | ActiveRecord: 0.0ms | Allocations: 27461)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:53:41 +0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1256)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms | Allocations: 3039)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="section">
+  <div class="container">
+    <div class="column is-centered">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+<div class="column is-4">
+  <h2 class="title is-2">   
+  </h2>
+<div class="field">
+  <div class="control">  
+      <%= f.input :email, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } autofocus: true %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password_confirmation, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" }%>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <%= f.button :submit, "Sign up", class: "button is-info is-medium" %>
+  </div>
+</div>
+<% end %>
+<%= render "devise/shared/links" %>
+     </div>
+   </div>
+</div>
+</div>:
+
+Started POST "/__better_errors/824a8338c174fa93/variables" for 127.0.0.1 at 2020-10-09 20:53:41 +0400
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:56:12 +0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1255)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3037)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="section">
+  <div class="container">
+    <div class="column is-centered">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+<div class="column is-4">
+  <h2 class="title is-2">Sign Up   
+  </h2>
+<div class="field">
+  <div class="control">  
+      <%= f.input :email, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } autofocus: true %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password_confirmation, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } %>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <%= f.button :submit, "Sign up", class: "button is-info is-medium" %>
+  </div>
+</div>
+<% end %>
+<%= render "devise/shared/links" %>
+     </div>
+   </div>
+</div>
+</div>:
+
+Started POST "/__better_errors/cb8679f1919d9552/variables" for 127.0.0.1 at 2020-10-09 20:56:13 +0400
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:57:58 +0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1254)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 3035)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="section">
+  <div class="container">
+    <div class="column is-centered">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+<div class="column is-4">
+  <h2 class="title is-2">Sign Up   
+  </h2>
+<div class="field">
+  <div class="control">  
+      <%= f.input :email, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } autofocus: true %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" }, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password_confirmation, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } %>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <%= f.button :submit, "Sign up", class: "button is-info is-medium" %>
+  </div>
+</div>
+<% end %>
+<%= render "devise/shared/links" %>
+     </div>
+   </div>
+</div>
+</div>:
+
+Started POST "/__better_errors/0d8b2a0004063990/variables" for 127.0.0.1 at 2020-10-09 20:57:59 +0400
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-10-09 20:58:38 +0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1256)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 3039)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <div class="section">
+  <div class="container">
+    <div class="column is-centered">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+<div class="column is-4">
+  <h2 class="title is-2">Sign Up   
+  </h2>
+<div class="field">
+  <div class="control">  
+      <%= f.input :email, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class:"label" } autofocus: true %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class:"label" }, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+  </div>
+</div>
+ <div class="field">
+  <div class="control">
+      <%= f.input :password_confirmation, required: true, input_html: {class: "input" }, wrapper: false, label_html: { class: "label" } %>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <%= f.button :submit, "Sign up", class:"button is-info is-medium" %>
+  </div>
+</div>
+<% end %>
+<%= render "devise/shared/links" %>
+     </div>
+   </div>
+</div>
+</div>:
+
+Started POST "/__better_errors/adeba2b01c7aa199/variables" for 127.0.0.1 at 2020-10-09 20:58:38 +0400
